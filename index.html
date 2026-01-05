@@ -245,6 +245,20 @@
       .featureRow{grid-template-columns: 1fr}
       .nav{border-radius: 18px}
     }
+    /* FIX Google Places Autocomplete click issue */
+.pac-container {
+  z-index: 99999 !important;
+  pointer-events: auto !important;
+}
+
+/* Prevent parent containers from blocking clicks */
+.card,
+.hero,
+.contact,
+.wrap {
+  overflow: visible !important;
+}
+
   </style>
 </head>
 
@@ -747,3 +761,4 @@ function initGoogleMaps() {
   </script>
 </body>
 </html>
+
