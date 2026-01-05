@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Triple A’s Services | DFW Airport Rides & Senior Mobility</title>
+  <meta name="description" content="The Triple A’s Services provides reliable airport rides in the DFW area and senior shopping & mobility services in Dallas. Call/text to book or request a quote." />
+  <meta name="theme-color" content="#0b1f3a" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="The Triple A’s Services" />
+  <meta property="og:description" content="DFW Airport Rides + Senior Shopping & Mobility in Dallas–Fort Worth." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg:#071326;
+      --card:#0b1f3a;
+      --card2:#0a1a31;
+      --text:#eaf1ff;
+      --muted:#b9c7e6;
+      --brand:#5cc8ff;
+      --brand2:#9be7ff;
+      --line: rgba(255,255,255,.10);
+      --shadow: 0 18px 45px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 20% -10%, rgba(92,200,255,.22), transparent 60%),
+        radial-gradient(1000px 650px at 90% 10%, rgba(155,231,255,.15), transparent 55%),
+        linear-gradient(180deg, var(--bg), #050c18 60%, #040914);
+      line-height:1.5;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 80px}
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding:14px 16px; border:1px solid var(--line);
+      background: rgba(11,31,58,.55);
+      backdrop-filter: blur(10px);
+      border-radius: 999px;
+      position: sticky; top: 14px; z-index: 10;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px; text-decoration:none;
+    }
+    .logo{
+      width:38px; height:38px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--brand), rgba(92,200,255,.25));
+      box-shadow: 0 10px 24px rgba(92,200,255,.15);
+      display:grid; place-items:center;
+      border:1px solid rgba(255,255,255,.18);
+      font-weight:800;
+      letter-spacing:.5px;
+    }
+    .brand span{font-weight:800}
+    .navlinks{display:flex; gap:12px; flex-wrap:wrap; justify-content:flex-end}
+    .navlinks a{
+      text-decoration:none;
+      color:var(--muted);
+      padding:8px 10px;
+      border-radius: 999px;
+      border:1px solid transparent;
+    }
+    .navlinks a:hover{color:var(--text); border-color: var(--line); background: rgba(255,255,255,.04)}
+
+    .hero{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(11,31,58,.75), rgba(10,26,49,.55));
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .heroMain{padding:26px}
+    h1{
+      margin: 0 0 10px;
+      font-size: clamp(28px, 3.6vw, 44px);
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+    }
+    .sub{
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: clamp(15px, 1.6vw, 18px);
+      max-width: 60ch;
+    }
+    .pillRow{display:flex; gap:10px; flex-wrap:wrap; margin: 14px 0 18px}
+    .pill{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:8px 12px;
+      border-radius: 999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:12px 14px;
+      border-radius: 12px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      text-decoration:none;
+      font-weight:700;
+      transition: transform .08s ease, background .15s ease, border-color .15s ease;
+    }
+    .btn:hover{background: rgba(255,255,255,.07); border-color: rgba(92,200,255,.35)}
+    .btn:active{transform: translateY(1px)}
+    .btnPrimary{
+      background: linear-gradient(135deg, rgba(92,200,255,.95), rgba(155,231,255,.75));
+      color: #061223;
+      border-color: rgba(255,255,255,.28);
+    }
+    .btnPrimary:hover{filter: brightness(1.03)}
+    .heroSide{padding:18px; display:flex; flex-direction:column; gap:12px}
+    .sideBox{
+      border:1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255,255,255,.03);
+      padding:14px;
+    }
+    .sideTitle{font-weight:800; margin:0 0 6px}
+    .sideText{margin:0; color:var(--muted); font-size:14px}
+    .divider{height:1px; background: var(--line); margin: 10px 0}
+
+    section{margin-top:22px}
+    .sectionHead{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
+      margin-bottom: 10px;
+    }
+    h2{
+      margin:0;
+      font-size: 22px;
+      letter-spacing: -.2px;
+    }
+    .hint{margin:0; color:var(--muted); font-size:14px}
+
+    .grid2{
+      display:grid; grid-template-columns: 1fr 1fr; gap:16px;
+    }
+    .service{padding:18px}
+    .service h3{margin: 0 0 8px; font-size:18px}
+    .service p{margin: 0 0 12px; color:var(--muted)}
+    ul{margin:0; padding-left:18px; color: var(--muted)}
+    li{margin:6px 0}
+
+    .featureRow{
+      display:grid; grid-template-columns: repeat(4, 1fr);
+      gap:12px;
+    }
+    .feature{
+      padding:14px;
+      border-radius: 14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+    }
+    .feature b{display:block; margin-bottom:6px}
+    .feature span{color:var(--muted); font-size:14px}
+
+    .contact{
+      padding:18px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:16px;
+      align-items:start;
+    }
+    label{display:block; font-weight:700; margin-bottom:6px}
+    input, select, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius: 12px;
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--text);
+      outline:none;
+    }
+    input::placeholder, textarea::placeholder{color: rgba(185,199,230,.7)}
+    textarea{min-height:120px; resize:vertical}
+    .formGrid{display:grid; grid-template-columns: 1fr 1fr; gap:12px}
+    .formFull{grid-column: 1 / -1}
+    .small{font-size:13px; color: var(--muted); margin: 10px 0 0}
+    .note{
+      border:1px dashed rgba(92,200,255,.45);
+      background: rgba(92,200,255,.07);
+      padding:12px;
+      border-radius: 14px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    footer{
+      margin-top:22px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      color: var(--muted);
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      font-size: 14px;
+    }
+
+    .toast{
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      max-width: min(420px, calc(100vw - 32px));
+      background: rgba(11,31,58,.92);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 14px;
+      padding: 12px 14px;
+      color: var(--text);
+      box-shadow: var(--shadow);
+      transform: translateY(16px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .18s ease, transform .18s ease;
+      backdrop-filter: blur(10px);
+    }
+    .toast.show{opacity:1; transform: translateY(0)}
+    .toast p{margin:0; color: var(--muted); font-size: 14px}
+    .toast b{display:block; margin-bottom:4px; color: var(--text)}
+
+    @media (max-width: 900px){
+      .hero{grid-template-columns: 1fr}
+      .featureRow{grid-template-columns: 1fr 1fr}
+      .contact{grid-template-columns: 1fr}
+    }
+    @media (max-width: 520px){
+      .formGrid{grid-template-columns: 1fr}
+      .featureRow{grid-template-columns: 1fr}
+      .nav{border-radius: 18px}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="nav">
+      <a class="brand" href="#top" aria-label="The Triple A’s Services home">
+        <div class="logo">AAA</div>
+        <span>The Triple A’s Services</span>
+      </a>
+      <nav class="navlinks" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#partners">Senior Living Partners</a>
+        <a href="#book">Book / Quote</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </header>
+
+    <main id="top" class="hero">
+      <div class="card heroMain">
+        <h1>Reliable Airport Rides & Senior Mobility in the DFW Area</h1>
+        <p class="sub">
+          Professional, friendly transportation and shopping assistance—serving the Dallas–Fort Worth Metroplex with care,
+          punctual scheduling, and clear communication.
+        </p>
+
+        <div class="pillRow">
+          <span class="pill">📍 Dallas–Fort Worth Metroplex</span>
+          <span class="pill">✈️ DFW + Love Field</span>
+          <span class="pill">🛒 Senior Shopping & Errands</span>
+        </div>
+
+        <div class="ctaRow">
+          <!-- Replace placeholder phone with your real number later -->
+          <a class="btn btnPrimary" href="tel:+1XXXXXXXXXX">📞 Call</a>
+          <a class="btn btnPrimary" href="sms:+1XXXXXXXXXX">💬 Text</a>
+          <a class="btn" href="#book">🗓️ Request a Quote</a>
+        </div>
+
+        <div class="divider"></div>
+        <p class="hint">Need help fast? Call or text and we’ll confirm availability.</p>
+      </div>
+
+      <aside class="card heroSide" aria-label="Quick info">
+        <div class="sideBox">
+          <p class="sideTitle">Airport Transportation</p>
+          <p class="sideText">To/from DFW and Love Field. Luggage-friendly pickups and dependable timing.</p>
+        </div>
+        <div class="sideBox">
+          <p class="sideTitle">Senior Shopping & Mobility</p>
+          <p class="sideText">Errands, shopping trips, and appointments—plus partnerships with senior living communities.</p>
+        </div>
+        <div class="sideBox">
+          <p class="sideTitle">Placeholders Included</p>
+          <p class="sideText">Phone/email are placeholders so you can deploy immediately and update later.</p>
+        </div>
+      </aside>
+    </main>
+
+    <section id="services">
+      <div class="sectionHead">
+        <h2>Services</h2>
+        <p class="hint">Two focused offers—simple booking, dependable service.</p>
+      </div>
+
+      <div class="grid2">
+        <article class="card service">
+          <h3>✈️ DFW Airport Rides</h3>
+          <p>
+            On-time rides to and from the airport with a clean, comfortable vehicle and assistance with luggage when needed.
+          </p>
+          <ul>
+            <li>Serving DFW and Dallas Love Field (DAL)</li>
+            <li>Pickup/drop-off across the DFW metroplex</li>
+            <li>Early flights and scheduled rides welcome</li>
+            <li>Flat-rate or quote-based pricing (your choice)</li>
+          </ul>
+        </article>
+
+        <article class="card service">
+          <h3>🛒 Senior Shopping & Mobility</h3>
+          <p>
+            Helping seniors stay independent with safe transportation for shopping, errands, and appointments—shopping with
+            or shopping for residents.
+          </p>
+          <ul>
+            <li>Grocery & retail shopping trips</li>
+            <li>Pharmacy pickups and essential errands</li>
+            <li>Appointments and local transportation</li>
+            <li>Patient, door-to-door assistance</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="partners">
+      <div class="sectionHead">
+        <h2>Senior Living Partnerships</h2>
+        <p class="hint">A simple way for communities to support residents.</p>
+      </div>
+
+      <div class="card" style="padding:18px;">
+        <div class="featureRow">
+          <div class="feature">
+            <b>Scheduled Days</b>
+            <span>Set weekly shopping runs or appointment blocks.</span>
+          </div>
+          <div class="feature">
+            <b>Dedicated Support</b>
+            <span>Consistent service with clear communication.</span>
+          </div>
+          <div class="feature">
+            <b>Community Billing</b>
+            <span>Option for monthly invoicing (if desired).</span>
+          </div>
+          <div class="feature">
+            <b>Resident-Friendly</b>
+            <span>Patient help getting in/out and carrying bags.</span>
+          </div>
+        </div>
+
+        <div style="height:12px"></div>
+        <div class="note">
+          <b style="color:var(--text)">For partnership inquiries</b>
+          Email: partnerships@tripleaservices.com (placeholder) · Phone/Text: (XXX) XXX-XXXX (placeholder)
+        </div>
+      </div>
+    </section>
+
+    <section id="book">
+      <div class="sectionHead">
+        <h2>Request a Quote / Book a Ride</h2>
+        <p class="hint">Fill this out and we’ll follow up to confirm details.</p>
+      </div>
+
+      <div class="card contact">
+        <div>
+          <div class="note">
+            <b style="color:var(--text)">Make the form actually deliver emails</b><br/>
+            This form is ready for <b>Formspree</b> (free tier). Replace the <code>ACTION_URL</code> in the form tag with your Formspree URL.
+            If you don’t want a form, delete it and use call/text only.
+          </div>
+
+          <p class="small">
+            Placeholder contact:<br/>
+            Phone/Text: (XXX) XXX-XXXX · Email: info@tripleaservices.com
+          </p>
+        </div>
+
+        <!-- CONTACT FORM -->
+        <!-- 1) Create a Formspree form, get your endpoint URL, then replace ACTION_URL below. -->
+        <form id="quoteForm" action="ACTION_URL" method="POST">
+  <div class="formGrid">
+    <div>
+      <label for="name">Name</label>
+      <input id="name" name="name" placeholder="Your name" required />
+    </div>
+
+    <div>
+      <label for="phone">Phone</label>
+      <input id="phone" name="phone" placeholder="(XXX) XXX-XXXX" required />
+    </div>
+
+    <div>
+      <label for="service">Service Type</label>
+      <select id="service" name="service" required>
+        <option value="" selected disabled>Choose one</option>
+        <option value="airport">Airport Ride</option>
+        <option value="senior">Senior Shopping & Mobility</option>
+        <option value="partner">Senior Living Partnership Inquiry</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="date">Date & Time</label>
+      <input id="date" name="datetime" placeholder="e.g., Jan 12, 9:30 AM" />
+    </div>
+
+    <!-- Airport ride controls -->
+    <div class="formFull" id="airportFields" style="display:none;">
+      <div class="note" style="margin-bottom:12px;">
+        <b style="color:var(--text)">Airport Ride Pricing Estimate</b><br/>
+        Select the airport and enter your pickup address to estimate distance and price.
+        <div style="margin-top:6px; color:var(--muted); font-size:13px;">
+          Pricing formula: <b>$1 per mile + $10</b> (estimate)
+        </div>
+      </div>
+
+      <div class="formGrid" style="grid-template-columns: 1fr 1fr;">
+        <div>
+          <label for="airportSelect">Choose Airport</label>
+          <select id="airportSelect" name="airport" required>
+            <option value="" selected disabled>Select airport</option>
+            <option value="DFW">DFW International Airport</option>
+            <option value="DAL">Dallas Love Field Airport</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="passengers">Passengers (optional)</label>
+          <input id="passengers" name="passengers" placeholder="e.g., 1-4" />
+        </div>
+
+        <div class="formFull">
+          <label for="pickupAddress">Pickup Address</label>
+          <input id="pickupAddress" name="pickup_address" placeholder="Start typing your address..." autocomplete="off"/>
+        </div>
+
+        <div class="formFull" style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+          <button class="btn" type="button" id="calcBtn">📍 Calculate Distance & Price</button>
+          <span id="calcStatus" class="hint" style="margin:0;">Enter address + choose airport.</span>
+        </div>
+
+        <div class="formFull" id="estimateBox" style="display:none;">
+          <div class="note">
+            <b style="color:var(--text)">Estimated trip</b><br/>
+            Distance: <b><span id="milesOut">—</span> miles</b><br/>
+            Estimated Price: <b>$<span id="priceOut">—</span></b><br/>
+            <span class="hint" style="display:block; margin-top:6px;">
+              Final price may vary based on wait time, stops, or special requests.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Non-airport fields -->
+    <div class="formFull" id="genericPickupWrap">
+      <label for="pickup">Pickup Location</label>
+      <input id="pickup" name="pickup" placeholder="Address / city / landmark" />
+    </div>
+
+    <div class="formFull" id="dropoffWrap">
+      <label for="dropoff">Drop-off Location</label>
+      <input id="dropoff" name="dropoff" placeholder="Airport terminal, address, or destination" />
+    </div>
+
+    <div class="formFull">
+      <label for="notes">Notes / Special Requests</label>
+      <textarea id="notes" name="notes" placeholder="Luggage, mobility needs, flight info, etc."></textarea>
+    </div>
+
+    <!-- Hidden fields captured for you -->
+    <input type="hidden" id="distance_miles" name="distance_miles" value="" />
+    <input type="hidden" id="estimated_price" name="estimated_price" value="" />
+    <input type="hidden" id="airport_destination" name="airport_destination" value="" />
+
+    <input type="hidden" name="_subject" value="New request from The Triple A’s Services website" />
+    <input type="hidden" name="_format" value="plain" />
+
+    <div class="formFull" style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+      <button class="btn btnPrimary" type="submit">Submit Request</button>
+      <a class="btn" href="tel:+1XXXXXXXXXX">Or Call Now</a>
+      <a class="btn" href="sms:+1XXXXXXXXXX">Or Text Now</a>
+    </div>
+
+    <p class="small formFull" id="formHint">
+      If you haven’t set up Formspree yet, the button won’t deliver anywhere—use call/text for now.
+    </p>
+  </div>
+</form>
+
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="sectionHead">
+        <h2>FAQ</h2>
+        <p class="hint">Quick answers for common questions.</p>
+      </div>
+
+      <div class="grid2">
+        <article class="card service">
+          <h3>Do you serve both DFW and Love Field?</h3>
+          <p>Yes—rides can be scheduled to/from DFW and Dallas Love Field (DAL), plus locations across the metroplex.</p>
+
+          <h3 style="margin-top:14px;">How do I get pricing?</h3>
+          <p>Request a quote using the form, or call/text with pickup, drop-off, and date/time. Flat-rate options are available.</p>
+        </article>
+
+        <article class="card service">
+          <h3>Do you assist seniors with bags and mobility?</h3>
+          <p>Yes—patient door-to-door help is available, including carrying bags and taking extra time when needed.</p>
+
+          <h3 style="margin-top:14px;">Do you partner with senior living communities?</h3>
+          <p>Yes—scheduled transportation blocks and community billing can be arranged based on the facility’s needs.</p>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> The Triple A’s Services</div>
+      <div>Placeholder phone: (XXX) XXX-XXXX · Placeholder email: info@tripleaservices.com</div>
+    </footer>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true">
+    <b>Request submitted</b>
+    <p>Thanks! If you need immediate help, call or text using the buttons.</p>
+  </div>
+
+  <!-- Google Maps (REQUIRED for address + driving distance). Replace YOUR_GOOGLE_MAPS_API_KEY -->
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-0wXZXBqa2po0q2ntd_C4XKqM7BlRxeo&libraries=places&callback=initGoogleMaps&loading=async"
+  async
+  defer
+></script>
+
+window.gm_authFailure = function () {
+  console.error("Google Maps auth failure (referrer/key restriction).");
+};
+
+  <script>
+function initGoogleMaps() {
+  // Only attach autocomplete if Places is actually loaded
+  const pickup = document.getElementById("pickupAddress");
+  const statusEl = document.getElementById("calcStatus");
+  if (!pickup) return;
+
+  if (window.google?.maps?.places?.Autocomplete) {
+    // Prevent double-init
+    if (pickup.dataset.placesReady === "1") return;
+    pickup.dataset.placesReady = "1";
+
+    const ac = new google.maps.places.Autocomplete(pickup, {
+      types: ["address"],
+      componentRestrictions: { country: "us" },
+      fields: ["formatted_address", "geometry"],
+    });
+
+    ac.addListener("place_changed", () => {
+      if (statusEl) statusEl.textContent = "Address selected. Ready to calculate.";
+    });
+
+    if (statusEl) statusEl.textContent = "Type your address and pick a suggestion.";
+  } else {
+    if (statusEl) statusEl.textContent = "Type your full address (autocomplete is off).";
+  }
+}
+  // Update footer year
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const form = document.getElementById("quoteForm");
+  const toast = document.getElementById("toast");
+  const formHint = document.getElementById("formHint");
+
+  const serviceSelect = document.getElementById("service");
+  const airportFields = document.getElementById("airportFields");
+
+  const genericPickupWrap = document.getElementById("genericPickupWrap");
+  const dropoffWrap = document.getElementById("dropoffWrap");
+
+  const airportSelect = document.getElementById("airportSelect");
+  const pickupAddressInput = document.getElementById("pickupAddress");
+  const calcBtn = document.getElementById("calcBtn");
+  const calcStatus = document.getElementById("calcStatus");
+  const estimateBox = document.getElementById("estimateBox");
+  const milesOut = document.getElementById("milesOut");
+  const priceOut = document.getElementById("priceOut");
+
+  const hiddenMiles = document.getElementById("distance_miles");
+  const hiddenPrice = document.getElementById("estimated_price");
+  const hiddenAirportDest = document.getElementById("airport_destination");
+
+  // Airport coordinates (you can refine later)
+  const AIRPORTS = {
+    DFW: { name: "DFW International Airport", lat: 32.8998091, lng: -97.0403352 },
+    DAL: { name: "Dallas Love Field Airport", lat: 32.8471139, lng: -96.8517725 },
+  };
+
+  // Pricing formula
+  function priceFromMiles(miles) {
+    // $1 per mile + $10
+    const raw = (miles * 1) + 10;
+    // Round to nearest whole dollar (change if you want)
+    return Math.round(raw);
+  }
+
+  // Toggle airport fields based on service type
+  function updateServiceUI() {
+    const val = serviceSelect.value;
+
+    if (val === "airport") {
+      airportFields.style.display = "block";
+      genericPickupWrap.style.display = "none";
+      dropoffWrap.style.display = "none";
+
+      // Make airport-specific fields required
+      airportSelect.required = true;
+      pickupAddressInput.required = true;
+    } else {
+      airportFields.style.display = "none";
+      genericPickupWrap.style.display = "block";
+      dropoffWrap.style.display = "block";
+
+      airportSelect.required = false;
+      pickupAddressInput.required = false;
+
+      // Clear estimate outputs
+      estimateBox.style.display = "none";
+      milesOut.textContent = "—";
+      priceOut.textContent = "—";
+      hiddenMiles.value = "";
+      hiddenPrice.value = "";
+      hiddenAirportDest.value = "";
+    }
+  }
+
+  serviceSelect.addEventListener("change", updateServiceUI);
+  updateServiceUI();
+
+
+  // Calculate driving distance using Google Distance Matrix
+  async function calculateDistanceAndPrice() {
+  estimateBox.style.display = "none";
+  calcStatus.textContent = "Calculating...";
+
+  const airportCode = airportSelect.value;
+  const pickupText = pickupAddressInput.value.trim();
+
+  if (!airportCode) return (calcStatus.textContent = "Please select an airport.");
+  if (!pickupText) return (calcStatus.textContent = "Please enter your pickup address.");
+
+  if (!window.google || !google.maps || !google.maps.DistanceMatrixService) {
+    calcStatus.textContent = "Maps not ready. Check API key / enabled APIs / referrer restrictions.";
+    return;
+  }
+
+  const dest = AIRPORTS[airportCode];
+  hiddenAirportDest.value = dest.name;
+
+  const service = new google.maps.DistanceMatrixService();
+
+  const timer = setTimeout(() => {
+    calcStatus.textContent =
+      "Timed out. Usually Billing not enabled, Distance Matrix API not enabled, or referrer not allowed. Check Console.";
+  }, 8000);
+
+  service.getDistanceMatrix(
+    {
+      origins: [pickupText],
+      destinations: [new google.maps.LatLng(dest.lat, dest.lng)],
+      travelMode: google.maps.TravelMode.DRIVING,
+      unitSystem: google.maps.UnitSystem.IMPERIAL,
+    },
+    (response, status) => {
+      clearTimeout(timer);
+
+      if (status !== "OK") {
+        console.error("DistanceMatrix status:", status, response);
+        calcStatus.textContent = `DistanceMatrix error: ${status} (see Console)`;
+        return;
+      }
+
+      const el = response?.rows?.[0]?.elements?.[0];
+      if (!el) {
+        console.error("No element:", response);
+        calcStatus.textContent = "No route data returned. Try a more complete address.";
+        return;
+      }
+
+      if (el.status !== "OK") {
+        console.error("Element status:", el.status, response);
+        calcStatus.textContent = `Route error: ${el.status}. Try a more specific address.`;
+        return;
+      }
+
+      const miles = el.distance.value / 1609.344;
+      const milesRounded = Math.round(miles * 10) / 10;
+      const estimated = priceFromMiles(miles);
+
+      milesOut.textContent = milesRounded.toString();
+      priceOut.textContent = estimated.toString();
+
+      hiddenMiles.value = milesRounded.toString();
+      hiddenPrice.value = estimated.toString();
+
+      estimateBox.style.display = "block";
+      calcStatus.textContent = "Done. You can submit your request.";
+    }
+  );
+}
+
+
+  calcBtn.addEventListener("click", calculateDistanceAndPrice);
+
+  // Form submit handler (keeps your placeholder protection + toast)
+  form.addEventListener("submit", (e) => {
+    if (form.action.includes("ACTION_URL")) {
+      e.preventDefault();
+      formHint.textContent =
+        "Form not connected yet. Replace ACTION_URL with your Formspree endpoint, or use call/text for now.";
+    }
+
+    toast.classList.add("show");
+    setTimeout(() => toast.classList.remove("show"), 3200);
+  });
+
+
+  </script>
+</body>
+</html>
