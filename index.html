@@ -426,7 +426,7 @@
       <label for="service">Service Type</label>
       <select id="service" name="service" required>
         <option value="" selected disabled>Choose one</option>
-        <option value="airport">Airport Ride</option>
+        <option value="airport">Airport Ride (To / From Airport)</option>
         <option value="senior">Senior Shopping & Mobility</option>
         <option value="partner">Senior Living Partnership Inquiry</option>
       </select>
@@ -440,8 +440,9 @@
     <!-- Airport ride controls -->
     <div class="formFull" id="airportFields" style="display:none;">
       <div class="note" style="margin-bottom:12px;">
-        <b style="color:var(--text)">Airport Ride Pricing Estimate</b><br/>
-        Select the airport and enter your pickup address to estimate distance and price.
+     <b style="color:var(--text)">Airport Ride Fare Estimate</b><br/>
+Select the airport and enter the address for the <b>non-airport location</b>
+(home, hotel, or business) to estimate distance and fare.
         <div style="margin-top:6px; color:var(--muted); font-size:13px;">
           Estimate: <b>Fare shown is an estimate</b> (before service fee). A service fee will be added at confirmation.
         </div>
@@ -463,7 +464,7 @@
         </div>
 
         <div class="formFull">
-          <label for="pickupAddress">Pickup Address</label>
+          <label for="pickupAddress">Address (Home / Hotel / Pickup or Drop-off)</label>
           <input id="pickupAddress" name="pickup_address" placeholder="Start typing your address..." autocomplete="off"/>
         </div>
 
@@ -476,9 +477,11 @@
           <div class="note">
             <b style="color:var(--text)">Estimated trip</b><br/>
             Distance: <b><span id="milesOut">—</span> miles</b><br/>
-            Estimated Price: <b>$<span id="priceOut">—</span></b><br/>
+            Estimated Price(before service fee): <b>$<span id="priceOut">—</span></b><br/>
             <span class="hint" style="display:block; margin-top:6px;">
-              Final price may vary based on wait time, stops, or special requests.
+            Estimate only for rides to or from the airport.
+            Final total may vary based on wait time, tolls, extra stops, or special requests.
+            A service fee will be added at confirmation.
             </span>
           </div>
         </div>
@@ -761,5 +764,6 @@ function initGoogleMaps() {
   </script>
 </body>
 </html>
+
 
 
