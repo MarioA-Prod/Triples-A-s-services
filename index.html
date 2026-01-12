@@ -437,6 +437,16 @@
       <input id="date" name="datetime" placeholder="e.g., Jan 12, 9:30 AM" />
     </div>
 
+    <div>
+  <label for="direction">Ride Direction</label>
+  <select id="direction" name="direction" required>
+    <option value="" selected disabled>Select one</option>
+    <option value="to_airport">To the Airport</option>
+    <option value="from_airport">From the Airport</option>
+  </select>
+</div>
+
+
     <!-- Airport ride controls -->
     <div class="formFull" id="airportFields" style="display:none;">
       <div class="note" style="margin-bottom:12px;">
@@ -764,6 +774,7 @@ function initGoogleMaps() {
   </script>
 </body>
 </html>
+
 
 
 
